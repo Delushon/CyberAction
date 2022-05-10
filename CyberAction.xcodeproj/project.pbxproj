@@ -13,6 +13,19 @@
 		114EA30B28298B4D00523AD1 /* CyberAction.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114EA30928298B4D00523AD1 /* CyberAction.xcdatamodeld */; };
 		114EA30D28298B4E00523AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114EA30C28298B4E00523AD1 /* Assets.xcassets */; };
 		114EA31028298B4E00523AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114EA30E28298B4E00523AD1 /* LaunchScreen.storyboard */; };
+		114EA31C2829A02D00523AD1 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA31B2829A02D00523AD1 /* AccountViewController.swift */; };
+		114EA3202829BB3700523AD1 /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA31F2829BB3700523AD1 /* NumberViewController.swift */; };
+		114EA3222829BB4500523AD1 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA3212829BB4500523AD1 /* CodeViewController.swift */; };
+		114EA3242829BB5A00523AD1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA3232829BB5A00523AD1 /* HistoryViewController.swift */; };
+		114EA3262829BC3800523AD1 /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA3252829BC3800523AD1 /* MyBookingsViewController.swift */; };
+		114EA3282829BC4300523AD1 /* MyEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA3272829BC4300523AD1 /* MyEventsViewController.swift */; };
+		114EA32A2829BC6600523AD1 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA3292829BC6600523AD1 /* EditViewController.swift */; };
+		114EA32D2829C1E800523AD1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA32C2829C1E800523AD1 /* Person.swift */; };
+		114EA3312829C3B800523AD1 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA32F2829C3B800523AD1 /* HistoryCell.swift */; };
+		114EA3322829C3B800523AD1 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114EA3302829C3B800523AD1 /* HistoryCell.xib */; };
+		114EA3342829C41A00523AD1 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA3332829C41A00523AD1 /* History.swift */; };
+		114EA3372829C63100523AD1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA3362829C63100523AD1 /* User.swift */; };
+		114EA3392829CC2800523AD1 /* FictiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114EA3382829CC2800523AD1 /* FictiveData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,19 @@
 		114EA30C28298B4E00523AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		114EA30F28298B4E00523AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114EA31128298B4E00523AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114EA31B2829A02D00523AD1 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		114EA31F2829BB3700523AD1 /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
+		114EA3212829BB4500523AD1 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		114EA3232829BB5A00523AD1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		114EA3252829BC3800523AD1 /* MyBookingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
+		114EA3272829BC4300523AD1 /* MyEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsViewController.swift; sourceTree = "<group>"; };
+		114EA3292829BC6600523AD1 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		114EA32C2829C1E800523AD1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		114EA32F2829C3B800523AD1 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		114EA3302829C3B800523AD1 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		114EA3332829C41A00523AD1 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		114EA3362829C63100523AD1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		114EA3382829CC2800523AD1 /* FictiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FictiveData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +82,13 @@
 		114EA2FF28298B4D00523AD1 /* CyberAction */ = {
 			isa = PBXGroup;
 			children = (
-				114EA30028298B4D00523AD1 /* AppDelegate.swift */,
-				114EA30228298B4D00523AD1 /* SceneDelegate.swift */,
+				114EA33A2829DD9600523AD1 /* Utils */,
+				114EA3352829C62200523AD1 /* Data */,
+				114EA32B2829C1C700523AD1 /* FictiveData */,
+				114EA31A28299EEF00523AD1 /* Cells */,
+				114EA31928299E2800523AD1 /* Models */,
+				114EA31828299E1D00523AD1 /* Controllers */,
+				114EA31728299DFF00523AD1 /* Application */,
 				114EA30628298B4D00523AD1 /* Main.storyboard */,
 				114EA30C28298B4E00523AD1 /* Assets.xcassets */,
 				114EA30E28298B4E00523AD1 /* LaunchScreen.storyboard */,
@@ -65,6 +96,78 @@
 				114EA30928298B4D00523AD1 /* CyberAction.xcdatamodeld */,
 			);
 			path = CyberAction;
+			sourceTree = "<group>";
+		};
+		114EA31728299DFF00523AD1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				114EA30228298B4D00523AD1 /* SceneDelegate.swift */,
+				114EA30028298B4D00523AD1 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		114EA31828299E1D00523AD1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				114EA31B2829A02D00523AD1 /* AccountViewController.swift */,
+				114EA31F2829BB3700523AD1 /* NumberViewController.swift */,
+				114EA3212829BB4500523AD1 /* CodeViewController.swift */,
+				114EA3232829BB5A00523AD1 /* HistoryViewController.swift */,
+				114EA3252829BC3800523AD1 /* MyBookingsViewController.swift */,
+				114EA3272829BC4300523AD1 /* MyEventsViewController.swift */,
+				114EA3292829BC6600523AD1 /* EditViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		114EA31928299E2800523AD1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				114EA32C2829C1E800523AD1 /* Person.swift */,
+				114EA3332829C41A00523AD1 /* History.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		114EA31A28299EEF00523AD1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				114EA32E2829C39800523AD1 /* HistoryCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		114EA32B2829C1C700523AD1 /* FictiveData */ = {
+			isa = PBXGroup;
+			children = (
+				114EA3382829CC2800523AD1 /* FictiveData.swift */,
+			);
+			path = FictiveData;
+			sourceTree = "<group>";
+		};
+		114EA32E2829C39800523AD1 /* HistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				114EA32F2829C3B800523AD1 /* HistoryCell.swift */,
+				114EA3302829C3B800523AD1 /* HistoryCell.xib */,
+			);
+			path = HistoryCell;
+			sourceTree = "<group>";
+		};
+		114EA3352829C62200523AD1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				114EA3362829C63100523AD1 /* User.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		114EA33A2829DD9600523AD1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +230,7 @@
 			files = (
 				114EA31028298B4E00523AD1 /* LaunchScreen.storyboard in Resources */,
 				114EA30D28298B4E00523AD1 /* Assets.xcassets in Resources */,
+				114EA3322829C3B800523AD1 /* HistoryCell.xib in Resources */,
 				114EA30828298B4D00523AD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +243,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				114EA30128298B4D00523AD1 /* AppDelegate.swift in Sources */,
+				114EA3282829BC4300523AD1 /* MyEventsViewController.swift in Sources */,
+				114EA3222829BB4500523AD1 /* CodeViewController.swift in Sources */,
 				114EA30328298B4D00523AD1 /* SceneDelegate.swift in Sources */,
+				114EA32D2829C1E800523AD1 /* Person.swift in Sources */,
+				114EA3202829BB3700523AD1 /* NumberViewController.swift in Sources */,
+				114EA3392829CC2800523AD1 /* FictiveData.swift in Sources */,
+				114EA3372829C63100523AD1 /* User.swift in Sources */,
+				114EA3312829C3B800523AD1 /* HistoryCell.swift in Sources */,
+				114EA3262829BC3800523AD1 /* MyBookingsViewController.swift in Sources */,
+				114EA31C2829A02D00523AD1 /* AccountViewController.swift in Sources */,
 				114EA30B28298B4D00523AD1 /* CyberAction.xcdatamodeld in Sources */,
+				114EA3342829C41A00523AD1 /* History.swift in Sources */,
+				114EA32A2829BC6600523AD1 /* EditViewController.swift in Sources */,
+				114EA3242829BB5A00523AD1 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +406,7 @@
 				DEVELOPMENT_TEAM = PYX75F92Q4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CyberAction/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Доступ к фото для выбора аватара";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +437,7 @@
 				DEVELOPMENT_TEAM = PYX75F92Q4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CyberAction/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Доступ к фото для выбора аватара";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
