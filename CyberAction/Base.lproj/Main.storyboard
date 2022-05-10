@@ -177,6 +177,7 @@
                         <outlet property="placeholderButton" destination="uD4-7Z-Q1C" id="S5p-kD-MCy"/>
                         <outlet property="placeholderLabel" destination="Xmu-lp-VCX" id="cR0-VQ-o9v"/>
                         <outlet property="placesCollectionView" destination="J8S-42-u3C" id="VIe-GX-bj0"/>
+                        <segue destination="1Xm-nl-bmK" kind="show" id="dAh-OL-OQd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mH3-EF-HBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -229,6 +230,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqI-tW-jSC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4564" y="167"/>
+        </scene>
+        <!--Выбор даты-->
+        <scene sceneID="mWT-Cd-rjY">
+            <objects>
+                <viewController id="1Xm-nl-bmK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N2d-ep-20Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4t0-Bt-gUF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выбор даты" id="fMO-Kf-SfR">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="Rcx-U1-qU2"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dd6-Wx-L5V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5433" y="642"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="V3o-D6-iwI">
