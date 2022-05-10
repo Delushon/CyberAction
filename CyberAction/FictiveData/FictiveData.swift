@@ -13,10 +13,29 @@ class FictiveData {
     
     var histories: [History] = []
     var cities: [City] = []
+    var months: [Month] = []
     
     init() {
         initHistories()
         initCities()
+        initMonths()
+    }
+    
+    func initMonths() {
+        for i in 0...11 {
+            let nextMonth = Calendar.current.date(byAdding: .month, value: i, to: Date())
+            let monthInt = Calendar.current.component(.month, from: nextMonth ?? Date())
+            let yearInt = Calendar.current.component(.year, from: nextMonth ?? Date())
+            let firstDayOfWeekForMonth = DayOfWeek.allCases[(nextMonth?.startOfMonth().dayNumberOfWeek() ?? 1) - 1]
+            
+            let range = Calendar.current.range(of: .day, in: .month, for: nextMonth ?? Date())!
+            let numDays = range.count
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "ru_RU")
+            dateFormatter.dateFormat = "LLLL"
+            let stringDate = dateFormatter.string(from: nextMonth ?? Date())
+            months.append(Month(numberOfYear: yearInt, numberOfMonth: monthInt, name: stringDate, daysCount: numDays, firstDayOfWeek: firstDayOfWeekForMonth))
+        }
     }
     
     func initHistories() {

@@ -33,12 +33,12 @@ class DateViewController: UIViewController {
 extension DateViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return FictiveData.instance.cities.count
+        return FictiveData.instance.months.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = datesCollectionView.dequeueReusableCell(withReuseIdentifier: "MonthCell", for: indexPath) as! MonthCell
-//        cell.setup(city: FictiveData.instance.cities[indexPath.item])
+        cell.setup(month: FictiveData.instance.months[indexPath.item])
         return cell
     }
     
