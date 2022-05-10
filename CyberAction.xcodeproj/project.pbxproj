@@ -34,6 +34,10 @@
 		1187E2B2282AE6B6008F2328 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1187E2B0282AE6B6008F2328 /* CityCell.xib */; };
 		1187E2B4282AE901008F2328 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187E2B3282AE901008F2328 /* City.swift */; };
 		1187E2B6282AEACF008F2328 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187E2B5282AEACF008F2328 /* Place.swift */; };
+		1187E2B9282AFD17008F2328 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187E2B8282AFD17008F2328 /* Month.swift */; };
+		1187E2BB282AFE3F008F2328 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187E2BA282AFE3F008F2328 /* DateViewController.swift */; };
+		1187E2BE282B013C008F2328 /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1187E2BC282B013C008F2328 /* MonthCell.swift */; };
+		1187E2BF282B013C008F2328 /* MonthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1187E2BD282B013C008F2328 /* MonthCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		1187E2B0282AE6B6008F2328 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		1187E2B3282AE901008F2328 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		1187E2B5282AEACF008F2328 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		1187E2B8282AFD17008F2328 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
+		1187E2BA282AFE3F008F2328 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		1187E2BC282B013C008F2328 /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
+		1187E2BD282B013C008F2328 /* MonthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 				114EA3292829BC6600523AD1 /* EditViewController.swift */,
 				1187E2A5282AD603008F2328 /* BookingViewController.swift */,
 				1187E2A7282AE5F7008F2328 /* CityViewController.swift */,
+				1187E2BA282AFE3F008F2328 /* DateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 				114EA3332829C41A00523AD1 /* History.swift */,
 				1187E2B3282AE901008F2328 /* City.swift */,
 				1187E2B5282AEACF008F2328 /* Place.swift */,
+				1187E2B8282AFD17008F2328 /* Month.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +163,7 @@
 		114EA31A28299EEF00523AD1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1187E2B7282AFACF008F2328 /* MonthCell */,
 				1187E2AA282AE688008F2328 /* CityCell */,
 				1187E2A9282AE67F008F2328 /* PlaceCell */,
 				114EA32E2829C39800523AD1 /* HistoryCell */,
@@ -208,6 +219,15 @@
 				1187E2B0282AE6B6008F2328 /* CityCell.xib */,
 			);
 			path = CityCell;
+			sourceTree = "<group>";
+		};
+		1187E2B7282AFACF008F2328 /* MonthCell */ = {
+			isa = PBXGroup;
+			children = (
+				1187E2BC282B013C008F2328 /* MonthCell.swift */,
+				1187E2BD282B013C008F2328 /* MonthCell.xib */,
+			);
+			path = MonthCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +290,7 @@
 			files = (
 				1187E2B2282AE6B6008F2328 /* CityCell.xib in Resources */,
 				114EA31028298B4E00523AD1 /* LaunchScreen.storyboard in Resources */,
+				1187E2BF282B013C008F2328 /* MonthCell.xib in Resources */,
 				114EA30D28298B4E00523AD1 /* Assets.xcassets in Resources */,
 				114EA3322829C3B800523AD1 /* HistoryCell.xib in Resources */,
 				1187E2AE282AE6AA008F2328 /* PlaceCell.xib in Resources */,
@@ -284,12 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1187E2BE282B013C008F2328 /* MonthCell.swift in Sources */,
 				1187E2B1282AE6B6008F2328 /* CityCell.swift in Sources */,
 				114EA30128298B4D00523AD1 /* AppDelegate.swift in Sources */,
 				114EA3282829BC4300523AD1 /* MyEventsViewController.swift in Sources */,
 				114EA3222829BB4500523AD1 /* CodeViewController.swift in Sources */,
 				114EA30328298B4D00523AD1 /* SceneDelegate.swift in Sources */,
 				114EA32D2829C1E800523AD1 /* Person.swift in Sources */,
+				1187E2BB282AFE3F008F2328 /* DateViewController.swift in Sources */,
 				1187E2B4282AE901008F2328 /* City.swift in Sources */,
 				114EA3202829BB3700523AD1 /* NumberViewController.swift in Sources */,
 				114EA3392829CC2800523AD1 /* FictiveData.swift in Sources */,
@@ -298,6 +321,7 @@
 				114EA3262829BC3800523AD1 /* MyBookingsViewController.swift in Sources */,
 				1187E2B6282AEACF008F2328 /* Place.swift in Sources */,
 				114EA31C2829A02D00523AD1 /* AccountViewController.swift in Sources */,
+				1187E2B9282AFD17008F2328 /* Month.swift in Sources */,
 				114EA30B28298B4D00523AD1 /* CyberAction.xcdatamodeld in Sources */,
 				114EA3342829C41A00523AD1 /* History.swift in Sources */,
 				114EA32A2829BC6600523AD1 /* EditViewController.swift in Sources */,

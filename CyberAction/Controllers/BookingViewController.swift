@@ -14,6 +14,8 @@ class BookingViewController: UIViewController {
     @IBOutlet weak var cityButton: UIButton!
     @IBOutlet weak var placesCollectionView: UICollectionView!
     
+    var selectedPlace: Place?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         placesCollectionView.delegate = self
@@ -59,6 +61,11 @@ class BookingViewController: UIViewController {
         cityButton.isHidden = false
         placesCollectionView.isHidden = false
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? DateViewController else { return }
+        destination.place = selectedPlace
+    }
 
 }
 
@@ -79,7 +86,10 @@ extension BookingViewController: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedPlace = User.currentUser?.city.places[indexPath.item]
+        performSegue(withIdentifier: "toDatePicker", sender: self)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width * 0.9, height: 35)//UIScreen.main.bounds.height * 0.7)
