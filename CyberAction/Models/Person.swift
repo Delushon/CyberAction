@@ -12,4 +12,5 @@ struct Person {
     var avatar: UIImage
     var nickname: String
     var balance: Int
+    var city: City
 }

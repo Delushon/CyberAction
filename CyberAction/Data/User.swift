@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 class User {
-    static var currentUser: Person? = Person(avatar: UIImage(named: "raiden")!, nickname: "Raiden", balance: 50000)
+    static var currentUser: Person? = Person(avatar: UIImage(named: "raiden")!, nickname: "Raiden", balance: 50000, city: FictiveData.instance.cities[0])
     
     static func initFictiveUser() {
-        currentUser = Person(avatar: UIImage(named: "raiden")!, nickname: "String", balance: 2222)
+        currentUser = Person(avatar: UIImage(named: "raiden")!, nickname: "Raiden", balance: 2222, city: FictiveData.instance.cities[0])
     }
 }

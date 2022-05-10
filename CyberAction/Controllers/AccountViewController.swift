@@ -15,15 +15,11 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var bookingsButton: UIButton!
     @IBOutlet weak var eventsButton: UIButton!
     @IBOutlet weak var authButton: UIButton!
-    @IBOutlet weak var qrCodeButton: UIBarButtonItem!
-    @IBOutlet weak var editButton: UIBarButtonItem!
+    @IBOutlet /*weak */var qrCodeButton: UIBarButtonItem!
+    @IBOutlet /*weak */var editButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,8 +75,9 @@ class AccountViewController: UIViewController {
         pointsButton.isHidden = true
         bookingsButton.isHidden = true
         eventsButton.isHidden = true
-        qrCodeButton.customView?.isHidden = true
-        editButton.customView?.isHidden = true
+        
+        navigationItem.leftBarButtonItem = nil
+        navigationItem.rightBarButtonItem = nil
     }
     
     func showUserInfo() {
@@ -89,8 +86,9 @@ class AccountViewController: UIViewController {
         pointsButton.isHidden = false
         bookingsButton.isHidden = false
         eventsButton.isHidden = false
-        qrCodeButton.customView?.isHidden = false
-        editButton.customView?.isHidden = false
+        
+        navigationItem.leftBarButtonItem = qrCodeButton
+        navigationItem.rightBarButtonItem = editButton
     }
     
 }

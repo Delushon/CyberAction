@@ -12,9 +12,11 @@ class FictiveData {
     static let instance = FictiveData()
     
     var histories: [History] = []
+    var cities: [City] = []
     
     init() {
         initHistories()
+        initCities()
     }
     
     func initHistories() {
@@ -22,6 +24,24 @@ class FictiveData {
             histories.append(History(date: Date.random(), amount: Int.random(in: 100...1000), type: HistoryType.random()))
             print(Int.random(in: 0...1) == 0 ? HistoryType.receive : HistoryType.spend)
         }
+    }
+    
+    func initCities() {
+        let cityA = City(name: "Нур-Султан", places: returnThreeAdresses(cityName: "Нур-Султан"))
+        let cityB = City(name: "Актобе", places: returnThreeAdresses(cityName: "Актобе"))
+        let cityC = City(name: "Алматы", places: returnThreeAdresses(cityName: "Алматы"))
+        let cityD = City(name: "Шымкент", places: returnThreeAdresses(cityName: "Шымкент"))
+        
+        cities = [cityA, cityB, cityC, cityD]
+    }
+    
+    func returnThreeAdresses(cityName: String) -> [Place] {
+        var places: [Place] = []
+        places.append(Place(address: "\(cityName) адрес 1"))
+        places.append(Place(address: "\(cityName) адрес 2"))
+        places.append(Place(address: "\(cityName) адрес 3"))
+        
+        return places
     }
 }
 

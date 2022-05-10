@@ -96,21 +96,139 @@
             </objects>
             <point key="canvasLocation" x="1648" y="1495"/>
         </scene>
-        <!--View Controller-->
+        <!--Бронирование-->
         <scene sceneID="6Ww-AW-IQc">
             <objects>
-                <viewController id="Jbx-G0-jx3" sceneMemberID="viewController">
+                <viewController id="Jbx-G0-jx3" customClass="BookingViewController" customModule="CyberAction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YGu-Be-ecS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eaZ-Jn-F5u">
+                                <rect key="frame" x="37" y="409.5" width="340.5" height="77.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для бронирования требуется авторизация" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmu-lp-VCX">
+                                        <rect key="frame" x="0.0" y="0.0" width="340.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.44565685020000001" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uD4-7Z-Q1C">
+                                        <rect key="frame" x="100.5" y="40.5" width="139" height="37"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Авторизация">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="oEJ-WV-7xr" kind="show" id="GDt-14-fcx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3N-bu-l4u">
+                                <rect key="frame" x="0.0" y="88" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Город"/>
+                                <connections>
+                                    <segue destination="VbU-ne-Jb5" kind="show" id="C87-Pn-QhM"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J8S-42-u3C">
+                                <rect key="frame" x="0.0" y="134" width="414" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cak-Fp-LKS">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="18r-ac-e0w">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sGN-5S-Xri">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="RuH-pe-ken"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J8S-42-u3C" firstAttribute="leading" secondItem="RuH-pe-ken" secondAttribute="leading" id="4b4-Y5-rud"/>
+                            <constraint firstItem="h3N-bu-l4u" firstAttribute="leading" secondItem="RuH-pe-ken" secondAttribute="leading" id="5Uh-qH-5mL"/>
+                            <constraint firstItem="J8S-42-u3C" firstAttribute="top" secondItem="h3N-bu-l4u" secondAttribute="bottom" constant="10" id="6AV-sI-4sr"/>
+                            <constraint firstItem="RuH-pe-ken" firstAttribute="trailing" secondItem="J8S-42-u3C" secondAttribute="trailing" id="WsY-ux-KbK"/>
+                            <constraint firstItem="RuH-pe-ken" firstAttribute="bottom" secondItem="J8S-42-u3C" secondAttribute="bottom" id="kZv-jU-rh5"/>
+                            <constraint firstItem="eaZ-Jn-F5u" firstAttribute="centerX" secondItem="YGu-Be-ecS" secondAttribute="centerX" id="mHj-no-fpx"/>
+                            <constraint firstItem="h3N-bu-l4u" firstAttribute="top" secondItem="RuH-pe-ken" secondAttribute="top" id="qbH-oz-pWi"/>
+                            <constraint firstItem="eaZ-Jn-F5u" firstAttribute="centerY" secondItem="YGu-Be-ecS" secondAttribute="centerY" id="qrJ-r7-xO0"/>
+                            <constraint firstItem="RuH-pe-ken" firstAttribute="trailing" secondItem="h3N-bu-l4u" secondAttribute="trailing" id="vk8-xM-3Ah"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="t44-6P-7vP"/>
+                    <navigationItem key="navigationItem" title="Бронирование" id="t44-6P-7vP">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="e5h-pk-xns"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityButton" destination="h3N-bu-l4u" id="pvk-ea-QkJ"/>
+                        <outlet property="placeholderButton" destination="uD4-7Z-Q1C" id="S5p-kD-MCy"/>
+                        <outlet property="placeholderLabel" destination="Xmu-lp-VCX" id="cR0-VQ-o9v"/>
+                        <outlet property="placesCollectionView" destination="J8S-42-u3C" id="VIe-GX-bj0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mH3-EF-HBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3229" y="499"/>
+        </scene>
+        <!--Выбор города-->
+        <scene sceneID="dtm-RF-NHo">
+            <objects>
+                <viewController id="VbU-ne-Jb5" customClass="CityViewController" customModule="CyberAction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RWh-XF-Amu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-DH-eaV">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gER-OW-sJd">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RAF-KH-jWd">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nZt-mI-Ma4">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A7M-dk-dqO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bxZ-DH-eaV" firstAttribute="leading" secondItem="A7M-dk-dqO" secondAttribute="leading" id="5oh-ZM-OE1"/>
+                            <constraint firstItem="A7M-dk-dqO" firstAttribute="bottom" secondItem="bxZ-DH-eaV" secondAttribute="bottom" id="lRh-tD-qt8"/>
+                            <constraint firstItem="A7M-dk-dqO" firstAttribute="trailing" secondItem="bxZ-DH-eaV" secondAttribute="trailing" id="t8L-bS-r3g"/>
+                            <constraint firstItem="bxZ-DH-eaV" firstAttribute="top" secondItem="A7M-dk-dqO" secondAttribute="top" id="xIu-f6-Tkf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выбор города" id="hFJ-uT-EdU"/>
+                    <connections>
+                        <outlet property="citiesCollectionView" destination="bxZ-DH-eaV" id="9Uq-2E-nbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqI-tW-jSC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4564" y="167"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="V3o-D6-iwI">
@@ -147,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntt-rK-Eea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3890" y="848"/>
+            <point key="canvasLocation" x="6662" y="1061"/>
         </scene>
         <!--История-->
         <scene sceneID="yce-ln-5CX">
@@ -530,6 +648,9 @@
             <point key="canvasLocation" x="5290" y="1495"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GDt-14-fcx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>

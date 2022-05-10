@@ -23,7 +23,9 @@ class EditViewController: UIViewController, UINavigationControllerDelegate, UIIm
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         avatarImageView.image = User.currentUser?.avatar
-        avatarImageView.maskCircle(anyImage: avatarImageView.image!)
+        if let avatarImage = avatarImageView.image {
+            avatarImageView.maskCircle(anyImage: avatarImage)
+        }
         nicknameTextField.text = User.currentUser?.nickname
     }
     
