@@ -240,7 +240,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pzs-re-lZ9">
-                                <rect key="frame" x="0.0" y="125.5" width="414" height="687.5"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="691"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BJA-wx-C2I">
                                     <size key="itemSize" width="128" height="128"/>
@@ -260,8 +260,8 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vF-Uh-RaL">
-                                <rect key="frame" x="0.0" y="88" width="414" height="27.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -284,11 +284,54 @@
                     <connections>
                         <outlet property="addressLabel" destination="6vF-Uh-RaL" id="QPi-Fx-1oJ"/>
                         <outlet property="datesCollectionView" destination="Pzs-re-lZ9" id="joF-Pc-pQS"/>
+                        <segue destination="24F-l1-2Ww" kind="show" identifier="toTime" id="s2C-6f-pjx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dd6-Wx-L5V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5431.884057971015" y="641.51785714285711"/>
+        </scene>
+        <!--Выбор времени-->
+        <scene sceneID="WWm-OJ-yya">
+            <objects>
+                <viewController id="24F-l1-2Ww" customClass="TimeViewController" customModule="CyberAction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16A-Pa-Tnc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адрес" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6r-O5-2Eu">
+                                <rect key="frame" x="0.0" y="98" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppm-4y-fFv">
+                                <rect key="frame" x="0.0" y="137" width="414" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X1O-5f-rGN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ppm-4y-fFv" firstAttribute="leading" secondItem="X1O-5f-rGN" secondAttribute="leading" id="1mH-LX-V8f"/>
+                            <constraint firstItem="X1O-5f-rGN" firstAttribute="trailing" secondItem="Ppm-4y-fFv" secondAttribute="trailing" id="DTC-aM-Hiy"/>
+                            <constraint firstItem="X1O-5f-rGN" firstAttribute="trailing" secondItem="b6r-O5-2Eu" secondAttribute="trailing" id="Et4-zd-eSi"/>
+                            <constraint firstItem="b6r-O5-2Eu" firstAttribute="top" secondItem="X1O-5f-rGN" secondAttribute="top" constant="10" id="Sus-lR-0fC"/>
+                            <constraint firstItem="b6r-O5-2Eu" firstAttribute="leading" secondItem="X1O-5f-rGN" secondAttribute="leading" id="aan-Ie-Csm"/>
+                            <constraint firstItem="Ppm-4y-fFv" firstAttribute="top" secondItem="b6r-O5-2Eu" secondAttribute="bottom" constant="15" id="dX2-6Q-Sd8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выбор времени" id="S9S-Q9-xql"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="b6r-O5-2Eu" id="GP9-nL-Q6E"/>
+                        <outlet property="dateLabel" destination="Ppm-4y-fFv" id="XGq-Sx-nrG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dlc-CO-stq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6713" y="295"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="V3o-D6-iwI">

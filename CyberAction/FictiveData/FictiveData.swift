@@ -27,6 +27,7 @@ class FictiveData {
             let monthInt = Calendar.current.component(.month, from: nextMonth ?? Date())
             let yearInt = Calendar.current.component(.year, from: nextMonth ?? Date())
             let firstDayOfWeekForMonth = DayOfWeek.allCases[(nextMonth?.startOfMonth().dayNumberOfWeek() ?? 1) - 1]
+            let lastDayOfWeekForMonth = DayOfWeek.allCases[(nextMonth?.endOfMonth().dayNumberOfWeek() ?? 1) - 1]
             
             let range = Calendar.current.range(of: .day, in: .month, for: nextMonth ?? Date())!
             let numDays = range.count
@@ -34,7 +35,7 @@ class FictiveData {
             dateFormatter.locale = Locale(identifier: "ru_RU")
             dateFormatter.dateFormat = "LLLL"
             let stringDate = dateFormatter.string(from: nextMonth ?? Date())
-            months.append(Month(numberOfYear: yearInt, numberOfMonth: monthInt, name: stringDate, daysCount: numDays, firstDayOfWeek: firstDayOfWeekForMonth))
+            months.append(Month(numberOfYear: yearInt, numberOfMonth: monthInt, name: stringDate, daysCount: numDays, firstDayOfWeek: firstDayOfWeekForMonth, lastDayOfWeek: lastDayOfWeekForMonth))
         }
     }
     

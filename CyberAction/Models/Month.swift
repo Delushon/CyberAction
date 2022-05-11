@@ -13,27 +13,34 @@ struct Month {
     let name: String
     let daysCount: Int
     let firstDayOfWeek: DayOfWeek
+    let lastDayOfWeek: DayOfWeek
 }
 
-enum DayOfWeek: String {
+enum DayOfWeek: String, CaseIterable {
     //gregorian
-    case Sunday = "ВС"
     case Monday = "ПН"
     case Tuesday = "ВТ"
     case Wednesday = "СР"
     case Thursday = "ЧТ"
     case Friday = "ПТ"
     case Saturday = "СБ"
+    case Sunday = "ВС"
     
 }
 
-extension DayOfWeek: CaseIterable {
-    
+
+extension CaseIterable where Self: Equatable {
+
+    var index: Self.AllCases.Index? {
+        return Self.allCases.index { self == $0 }
+    }
 }
 
 extension Date {
     func dayNumberOfWeek() -> Int? {
-        return Calendar.current.dateComponents([.weekday], from: self).weekday
+        //вернуть по нашему календарю (iso8601 возвращает тоже с воскресенья) 
+        let day = (Calendar.current.dateComponents([.weekday], from: self).weekday ?? 0) - 1
+        return day < 1 ? 7 : day
     }
     func startOfMonth() -> Date {
         return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
