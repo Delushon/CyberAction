@@ -14,11 +14,21 @@ class FictiveData {
     var histories: [History] = []
     var cities: [City] = []
     var months: [Month] = []
+    var timePackages: [TimePackage] = []
     
     init() {
         initHistories()
         initCities()
         initMonths()
+        initTimePackages()
+    }
+    
+    func initTimePackages() {
+        var minutes = 720
+        for _ in 0...10 {
+            timePackages.append(TimePackage(hour: minutes/60, minute: minutes%60))
+            minutes += 40
+        }
     }
     
     func initMonths() {

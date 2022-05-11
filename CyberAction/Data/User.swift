@@ -14,4 +14,6 @@ class User {
     static func initFictiveUser() {
         currentUser = Person(avatar: UIImage(named: "raiden")!, nickname: "Raiden", balance: 2222, city: FictiveData.instance.cities[0])
     }
+    
+    static var bookings: [Booking] = []
 }

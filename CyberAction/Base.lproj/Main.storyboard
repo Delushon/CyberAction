@@ -311,27 +311,66 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите время начала бронирования" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn5-lE-eHD">
+                                <rect key="frame" x="0.0" y="170" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lkJ-gq-60K">
+                                <rect key="frame" x="0.0" y="205.5" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="knq-wr-fXn"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ulu-CD-nAR">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI3-hi-3Er">
+                                <rect key="frame" x="92" y="285.5" width="230" height="35.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Выбрать пакет 40 минут">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="bookingButtonAction:" destination="24F-l1-2Ww" eventType="touchUpInside" id="UGK-Tx-LW2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X1O-5f-rGN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lkJ-gq-60K" firstAttribute="leading" secondItem="X1O-5f-rGN" secondAttribute="leading" id="0CP-Pt-8p3"/>
                             <constraint firstItem="Ppm-4y-fFv" firstAttribute="leading" secondItem="X1O-5f-rGN" secondAttribute="leading" id="1mH-LX-V8f"/>
+                            <constraint firstItem="oI3-hi-3Er" firstAttribute="centerX" secondItem="16A-Pa-Tnc" secondAttribute="centerX" id="7Df-Br-A2c"/>
                             <constraint firstItem="X1O-5f-rGN" firstAttribute="trailing" secondItem="Ppm-4y-fFv" secondAttribute="trailing" id="DTC-aM-Hiy"/>
                             <constraint firstItem="X1O-5f-rGN" firstAttribute="trailing" secondItem="b6r-O5-2Eu" secondAttribute="trailing" id="Et4-zd-eSi"/>
+                            <constraint firstItem="tn5-lE-eHD" firstAttribute="leading" secondItem="X1O-5f-rGN" secondAttribute="leading" id="FCy-mj-XpE"/>
+                            <constraint firstItem="lkJ-gq-60K" firstAttribute="top" secondItem="tn5-lE-eHD" secondAttribute="bottom" constant="15" id="OU5-xd-CGr"/>
+                            <constraint firstItem="X1O-5f-rGN" firstAttribute="trailing" secondItem="lkJ-gq-60K" secondAttribute="trailing" id="Rb6-6e-DpB"/>
                             <constraint firstItem="b6r-O5-2Eu" firstAttribute="top" secondItem="X1O-5f-rGN" secondAttribute="top" constant="10" id="Sus-lR-0fC"/>
                             <constraint firstItem="b6r-O5-2Eu" firstAttribute="leading" secondItem="X1O-5f-rGN" secondAttribute="leading" id="aan-Ie-Csm"/>
                             <constraint firstItem="Ppm-4y-fFv" firstAttribute="top" secondItem="b6r-O5-2Eu" secondAttribute="bottom" constant="15" id="dX2-6Q-Sd8"/>
+                            <constraint firstItem="X1O-5f-rGN" firstAttribute="trailing" secondItem="tn5-lE-eHD" secondAttribute="trailing" id="jUa-Fk-O1C"/>
+                            <constraint firstItem="oI3-hi-3Er" firstAttribute="top" secondItem="lkJ-gq-60K" secondAttribute="bottom" constant="30" id="juV-nz-uf8"/>
+                            <constraint firstItem="tn5-lE-eHD" firstAttribute="top" secondItem="Ppm-4y-fFv" secondAttribute="bottom" constant="15" id="uHe-0a-OdK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Выбор времени" id="S9S-Q9-xql"/>
                     <connections>
                         <outlet property="addressLabel" destination="b6r-O5-2Eu" id="GP9-nL-Q6E"/>
                         <outlet property="dateLabel" destination="Ppm-4y-fFv" id="XGq-Sx-nrG"/>
+                        <outlet property="timePackagesCollectionView" destination="lkJ-gq-60K" id="Dp7-Tq-P3r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dlc-CO-stq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6713" y="295"/>
+            <point key="canvasLocation" x="6711.594202898551" y="293.97321428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="V3o-D6-iwI">
